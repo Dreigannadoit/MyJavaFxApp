@@ -3,7 +3,10 @@
 
 <p>For CCC102 Project involving JavaFx GUI.  </p>
 <p>The executable file is located in this folder location</p>  
-``` out/artifacts/MyJavaFxApp_jar ```
+
+```
+out/artifacts/MyJavaFxApp_jar 
+```
 
 
 #### Note:
