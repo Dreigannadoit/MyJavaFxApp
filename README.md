@@ -11,8 +11,8 @@ or in this [Link text Here](https://drive.google.com/file/d/12309q9GcGekpfBg7vEB
 
 #### Note:
 
-<p>Make sure to download javaFx 19 onwards, or the app may not run as intended. </p>
-<p>And the dependancies (such as the libraries used) are in their repective files, but are not shown in this md. </p>
+<p>Make sure to download JavaFx sdk 19 onwards, or the app may not run as intended. </p>
+<p>And the dependancies (such as the libraries used) are in the repective files, but are not shown in this md. </p>
 
 
 #### Code:
