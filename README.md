@@ -25,7 +25,7 @@ public class App {
     }
 }
 ```
-
+<br />
   
 Main.java - main class that loads the content of the calculator app 
 ``` 
