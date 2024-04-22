@@ -2,7 +2,10 @@ Code By Drei Abmab
 
 For CCC102 Project involving JavaFx GUI. 
 
-Code
+Note:
+Make sure to download javaFx 19 onwards, or the app may not run as intended. 
+
+Code:
 
 App.java - runs the code in an executable file. 
 ``` 
