@@ -53,7 +53,7 @@ public class Main extends Application {
     }
 }
 ``` 
-
+<br />
   
 Display.java - interface that shows the components of the calculator
 ```
@@ -63,8 +63,8 @@ public interface Display {
     void add();
     void clear();
 }
-```
-
+``` 
+<br />
   
 UserInput.java - gets and sets user input for better scalability 
 ```
@@ -89,8 +89,8 @@ public class UserInput {
         return Integer.parseInt(secondNumber.getText());
     }
 }
-```
-
+``` 
+<br />
   
 CalculatorAppLayout.java - Contains all the elemnts of the app and how those are positions and function, should implement Display
 ```
