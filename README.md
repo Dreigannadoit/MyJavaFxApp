@@ -4,13 +4,12 @@ For CCC102 Project involving JavaFx GUI.
 
 Note:
 Make sure to download javaFx 19 onwards, or the app may not run as intended. 
+And the dependancies (such as the libraries used) are in their repective files, but are not shown in this md.
 
 Code:
 
 App.java - runs the code in an executable file. 
 ``` 
-package org.calculator;
-
 public class App {
     public static void main(String[] args){
         Main.main(args);
@@ -21,13 +20,6 @@ public class App {
 
 Main.java - main class that loads the content of the calculator app 
 ``` 
-package org.calculator;
-
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.scene.layout.GridPane;
-
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
@@ -55,8 +47,6 @@ public class Main extends Application {
 
 Display.java - interface that shows the components of the calculator
 ```
-package org.calculator;
-
 public interface Display {
     void createFrontEndElements();
     void positionLayout();
@@ -67,10 +57,6 @@ public interface Display {
 
 UserInput.java - gets and sets user input for better scalability 
 ```
-package org.calculator;
-
-import javafx.scene.control.TextField;
-
 public class UserInput {
     private TextField firstNumber;
     private TextField secondNumber;
@@ -96,16 +82,6 @@ public class UserInput {
 
 CalculatorAppLayout.java - Contains all the elemnts of the app and how those are positiones and function
 ```
-package org.calculator;
-
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.text.Text;
-
 public class CalculatorAppLayout implements Display {
     // Declare values
     private Text firstNumberLabel;
