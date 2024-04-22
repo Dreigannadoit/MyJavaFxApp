@@ -5,13 +5,13 @@
 <p>The executable file is located in this folder location ```out/artifacts/MyJavaFxApp_jar```</p>
 
 
-Note:
+#### Note:
 
 <p>Make sure to download javaFx 19 onwards, or the app may not run as intended. </p>
 <p>And the dependancies (such as the libraries used) are in their repective files, but are not shown in this md. </p>
 
 
-Code:
+#### Code:
 
 App.java - runs the code in an executable file. 
 ``` 
