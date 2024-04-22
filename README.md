@@ -1,12 +1,12 @@
 Code By Drei Abmab
 
-For CCC102 Project involving JavaFx GUI.  \n
-The executable file is located in this folder location ```out/artifacts/MyJavaFxApp_jar```
+<p>For CCC102 Project involving JavaFx GUI.  </p>
+<p>The executable file is located in this folder location ```out/artifacts/MyJavaFxApp_jar```</p>
 
 Note:
 
-Make sure to download javaFx 19 onwards, or the app may not run as intended. \n
-And the dependancies (such as the libraries used) are in their repective files, but are not shown in this md.
+<p>Make sure to download javaFx 19 onwards, or the app may not run as intended. </p>
+<p>And the dependancies (such as the libraries used) are in their repective files, but are not shown in this md. </p>
 
 Code:
 
