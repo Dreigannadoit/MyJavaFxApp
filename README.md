@@ -16,7 +16,7 @@ out/artifacts/MyJavaFxApp_jar
 
 
 #### Code:
-
+  
 App.java - runs the code in an executable file. 
 ``` 
 public class App {
@@ -26,7 +26,7 @@ public class App {
 }
 ```
 
-
+  
 Main.java - main class that loads the content of the calculator app 
 ``` 
 public class Main extends Application {
@@ -54,7 +54,7 @@ public class Main extends Application {
 }
 ``` 
 
-
+  
 Display.java - interface that shows the components of the calculator
 ```
 public interface Display {
@@ -65,7 +65,7 @@ public interface Display {
 }
 ```
 
-
+  
 UserInput.java - gets and sets user input for better scalability 
 ```
 public class UserInput {
@@ -91,7 +91,7 @@ public class UserInput {
 }
 ```
 
-
+  
 CalculatorAppLayout.java - Contains all the elemnts of the app and how those are positions and function, should implement Display
 ```
     // Declare values
