@@ -94,6 +94,9 @@ public class UserInput {
   
 CalculatorAppLayout.java - Contains all the elemnts of the app and how those are positions and function, should implement Display
 ```
+public class CalculatorAppLayout implements Display {
+```
+```
     // Declare values
     private Text firstNumberLabel;
     private TextField firstNumberField;
@@ -213,4 +216,7 @@ CalculatorAppLayout.java - Contains all the elemnts of the app and how those are
             resultField.setText("");
         });
     }
+```
+```
+}
 ```
