@@ -92,9 +92,8 @@ public class UserInput {
 ```
 
 
-CalculatorAppLayout.java - Contains all the elemnts of the app and how those are positiones and function
+CalculatorAppLayout.java - Contains all the elemnts of the app and how those are positions and function, should implement Display
 ```
-public class CalculatorAppLayout implements Display {
     // Declare values
     private Text firstNumberLabel;
     private TextField firstNumberField;
@@ -105,19 +104,20 @@ public class CalculatorAppLayout implements Display {
     private Button addButton;
     private Button clearButton;
     private GridPane gridPane;
-
+```
+```
     public GridPane createAndGetPositionedLayout() {
         // set-up Front-End Display and return grid layout
         createFrontEndElements();
         positionLayout();
         return gridPane;
     }
-
     public void credits(){
         Text author = new Text("Robert Andrei N. Bamba");
         gridPane.add(author, 0, 5);
     }
-
+```
+```
     @Override
     public void createFrontEndElements() {
         //creating label First Number
@@ -138,7 +138,8 @@ public class CalculatorAppLayout implements Display {
         addButton = new Button("Add");
         clearButton = new Button("Clear");
     }
-
+```
+```
     @Override
     public void positionLayout() {
         //Creating a Grid Pane
@@ -173,7 +174,8 @@ public class CalculatorAppLayout implements Display {
         // Add the buttonBox to the gridPane
         gridPane.add(buttonBox, 0, 3, 2, 1); // Span 2 columns
     }
-
+```
+```
     @Override
     public void add() {
         addButton.setOnAction(action -> {
@@ -201,7 +203,8 @@ public class CalculatorAppLayout implements Display {
             }
         });
     }
-
+```
+```
     @Override
     public void clear() {
         clearButton.setOnAction(action -> {
@@ -210,5 +213,4 @@ public class CalculatorAppLayout implements Display {
             resultField.setText("");
         });
     }
-}
 ```
