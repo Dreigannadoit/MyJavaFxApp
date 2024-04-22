@@ -2,7 +2,8 @@
 ### Code By Drei Abmab
 
 <p>For CCC102 Project involving JavaFx GUI.  </p>
-<p>The executable file is located in this folder location</p>  ```out/artifacts/MyJavaFxApp_jar```
+<p>The executable file is located in this folder location</p>  
+``` out/artifacts/MyJavaFxApp_jar ``` 
 
 
 #### Note:
