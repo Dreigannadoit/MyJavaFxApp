@@ -210,7 +210,7 @@ public class CalculatorAppLayout implements Display {
         divButton = new Button("Divide");
         clearButton = new Button("Clear");
 
-        author = new Text("Robert Andrei N. Bamba");
+        author = new Text("Robert Bamba");
     }
 ```
 ```
