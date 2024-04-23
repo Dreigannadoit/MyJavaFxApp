@@ -1,6 +1,9 @@
 # Basic Calcultor App
-### Code By Drei Abmab
+## Code By Drei Abmab
 
+<br />
+
+### Intro
 <p>For CCC102 Project involving JavaFx GUI.  </p>
 <p>The executable file is located in this folder location</p>  
 
@@ -9,13 +12,20 @@ out/artifacts/MyJavaFxApp_jar
 ```
 or in this [Link text Here](https://drive.google.com/file/d/12309q9GcGekpfBg7vEBgjezmbgyDrTb5/view?usp=sharing)
 
-#### Note:
+<p>The executable file is located in this folder location</p>  
+
+<br />
+
+### Note:
 
 <p>Make sure to download JavaFx sdk 19 onwards, or the app may not run as intended. </p>
-<p>And the dependancies (such as the libraries used) are in the repective files, but are not shown in this md. </p>
 
+[JavaFX SDK](https://gluonhq.com/products/javafx/)
+<p>And the dependencies (such as the libraries used) are in the respective files, but are not shown in this md. </p>
 
-#### Code:
+<br />
+
+### Code:
   
 App.java - runs the code in an executable file. 
 ``` 
