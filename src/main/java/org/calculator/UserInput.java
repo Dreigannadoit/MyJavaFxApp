@@ -3,8 +3,8 @@ package org.calculator;
 import javafx.scene.control.TextField;
 
 public class UserInput {
-    private TextField firstNumber;
-    private TextField secondNumber;
+    private final TextField firstNumber;
+    private final TextField secondNumber;
 
 
     UserInput(TextField firstNumber, TextField secondNumber){
@@ -15,11 +15,23 @@ public class UserInput {
     public TextField getFirstNumber() { return firstNumber;}
     public TextField getSecondNumber() { return secondNumber;}
 
-    public int convertFirstNumberTextFieldToInt(){
-        return Integer.parseInt(firstNumber.getText());
+    public double convertFirstNumberTextFieldToInt(){ return Double.parseDouble(firstNumber.getText()); }
+
+    public double convertSecondNumberTextFieldToInt(){ return Double.parseDouble(secondNumber.getText()); }
+
+    public String sumOfInput(){
+        return Double.toString(convertFirstNumberTextFieldToInt() + convertSecondNumberTextFieldToInt());
     }
 
-    public int convertSecondNumberTextFieldToInt(){
-        return Integer.parseInt(secondNumber.getText());
+    public String subOfInput(){
+        return Double.toString(convertFirstNumberTextFieldToInt() - convertSecondNumberTextFieldToInt());
+    }
+
+    public String mulOfInput(){
+        return Double.toString(convertFirstNumberTextFieldToInt() * convertSecondNumberTextFieldToInt());
+    }
+
+    public String divOfInput(){
+        return Double.toString(convertFirstNumberTextFieldToInt() / convertSecondNumberTextFieldToInt());
     }
 }

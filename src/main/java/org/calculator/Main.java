@@ -10,9 +10,8 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         CalculatorAppLayout calculatorAppLayout = new CalculatorAppLayout();
         GridPane gridPane = calculatorAppLayout.createAndGetPositionedLayout(); // Retrieve the GridPane
-        calculatorAppLayout.add();
+        calculatorAppLayout.operations();
         calculatorAppLayout.clear();
-        calculatorAppLayout.credits();
 
         //Creating a scene object
         Scene scene = new Scene(gridPane);
