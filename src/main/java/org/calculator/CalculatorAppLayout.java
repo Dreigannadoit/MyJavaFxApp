@@ -67,7 +67,6 @@ public class CalculatorAppLayout implements Display {
     }
 
     public void userClicksAdd(){ buttonAssignment(addButton);}
-
     public void userClicksSub(){ buttonAssignment(subButton);}
     public void userClicksMul(){ buttonAssignment(mulButton); }
     public void userClicksDiv(){ buttonAssignment(divButton); }

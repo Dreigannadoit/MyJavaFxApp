@@ -34,9 +34,8 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         CalculatorAppLayout calculatorAppLayout = new CalculatorAppLayout();
         GridPane gridPane = calculatorAppLayout.createAndGetPositionedLayout(); // Retrieve the GridPane
-        calculatorAppLayout.add();
+        calculatorAppLayout.operations();
         calculatorAppLayout.clear();
-        calculatorAppLayout.credits();
 
         //Creating a scene object
         Scene scene = new Scene(gridPane);
@@ -48,7 +47,7 @@ public class Main extends Application {
         stage.show();
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         launch(args);
     }
 }
@@ -60,7 +59,7 @@ Display.java - interface that shows the components of the calculator
 public interface Display {
     void createFrontEndElements();
     void positionLayout();
-    void add();
+    void operations();
     void clear();
 }
 ``` 
@@ -68,9 +67,13 @@ public interface Display {
   
 UserInput.java - gets and sets user input for better scalability 
 ```
+package org.calculator;
+
+import javafx.scene.control.TextField;
+
 public class UserInput {
-    private TextField firstNumber;
-    private TextField secondNumber;
+    private final TextField firstNumber;
+    private final TextField secondNumber;
 
 
     UserInput(TextField firstNumber, TextField secondNumber){
@@ -81,14 +84,27 @@ public class UserInput {
     public TextField getFirstNumber() { return firstNumber;}
     public TextField getSecondNumber() { return secondNumber;}
 
-    public int convertFirstNumberTextFieldToInt(){
-        return Integer.parseInt(firstNumber.getText());
+    public double convertFirstNumberTextFieldToInt(){ return Double.parseDouble(firstNumber.getText()); }
+
+    public double convertSecondNumberTextFieldToInt(){ return Double.parseDouble(secondNumber.getText()); }
+
+    public String sumOfInput(){
+        return Double.toString(convertFirstNumberTextFieldToInt() + convertSecondNumberTextFieldToInt());
     }
 
-    public int convertSecondNumberTextFieldToInt(){
-        return Integer.parseInt(secondNumber.getText());
+    public String subOfInput(){
+        return Double.toString(convertFirstNumberTextFieldToInt() - convertSecondNumberTextFieldToInt());
+    }
+
+    public String mulOfInput(){
+        return Double.toString(convertFirstNumberTextFieldToInt() * convertSecondNumberTextFieldToInt());
+    }
+
+    public String divOfInput(){
+        return Double.toString(convertFirstNumberTextFieldToInt() / convertSecondNumberTextFieldToInt());
     }
 }
+
 ``` 
 <br />
   
@@ -105,8 +121,12 @@ public class CalculatorAppLayout implements Display {
     private Text resultLabel;
     private TextField resultField;
     private Button addButton;
+    private Button subButton;
+    private Button mulButton;
+    private Button divButton;
     private Button clearButton;
     private GridPane gridPane;
+    private Text author;
 ```
 ```
     public GridPane createAndGetPositionedLayout() {
@@ -115,10 +135,46 @@ public class CalculatorAppLayout implements Display {
         positionLayout();
         return gridPane;
     }
-    public void credits(){
-        Text author = new Text("Robert Andrei N. Bamba");
-        gridPane.add(author, 0, 5);
+
+    public void buttonAssignment(Button button){
+        button.setOnAction(action -> {
+            try {
+                // Get user input
+                UserInput userInput = new UserInput(firstNumberField, secondNumberField);
+                // Perform operation based on the button's text
+                String buttonText = button.getText();
+                String result = "";
+                switch (buttonText) {
+                    case "Add":
+                        result = userInput.sumOfInput();
+                        break;
+                    case "Subtract":
+                        result = userInput.subOfInput();
+                        break;
+                    case "Multiply":
+                        result = userInput.mulOfInput();
+                        break;
+                    case "Divide":
+                        result = userInput.divOfInput();
+                        break;
+                    default:
+                        break;
+                }
+                // Display result
+                resultField.setText(result);
+
+            } catch (NumberFormatException e) {
+                // Handle the case where the input is not a valid integer
+                // Needs to be here or else the code will not run
+                resultField.setText("Invalid input");
+            }
+        });
     }
+
+    public void userClicksAdd(){ buttonAssignment(addButton);}
+    public void userClicksSub(){ buttonAssignment(subButton);}
+    public void userClicksMul(){ buttonAssignment(mulButton); }
+    public void userClicksDiv(){ buttonAssignment(divButton); }
 ```
 ```
     @Override
@@ -139,11 +195,16 @@ public class CalculatorAppLayout implements Display {
 
         //Creating Buttons
         addButton = new Button("Add");
+        subButton = new Button("Subtract");
+        mulButton = new Button("Multiply");
+        divButton = new Button("Divide");
         clearButton = new Button("Clear");
+
+        author = new Text("Robert Andrei N. Bamba");
     }
 ```
 ```
-    @Override
+   @Override
     public void positionLayout() {
         //Creating a Grid Pane
         gridPane = new GridPane();
@@ -170,41 +231,22 @@ public class CalculatorAppLayout implements Display {
         gridPane.add(resultField, 1, 2);
 
         // Creating an HBox for buttons
-        HBox buttonBox = new HBox(50); // 50 pixels spacing
+        HBox buttonBox = new HBox(10); // 50 pixels spacing
         buttonBox.setAlignment(Pos.CENTER); // Center buttons horizontally
-        buttonBox.getChildren().addAll(addButton, clearButton); // Add buttons to the HBox
+        buttonBox.getChildren().addAll(addButton, subButton, mulButton, divButton, clearButton); // Add buttons to the HBox
 
         // Add the buttonBox to the gridPane
         gridPane.add(buttonBox, 0, 3, 2, 1); // Span 2 columns
+        gridPane.add(author, 0, 5);
     }
 ```
 ```
     @Override
-    public void add() {
-        addButton.setOnAction(action -> {
-            try {
-                // Get user input
-                UserInput userInput = new UserInput(firstNumberField, secondNumberField);
-                int firstNum = userInput.convertFirstNumberTextFieldToInt();
-                int secondNum = userInput.convertSecondNumberTextFieldToInt();
-
-                // Perform addition and display result
-                int sum = firstNum + secondNum;
-                resultField.setText(String.valueOf(sum));
-
-                System.out.println(
-                        " User Display: " +
-                        userInput.getFirstNumber().getText() +
-                        " + " +
-                        userInput.getSecondNumber().getText() +
-                        " = " + sum
-                );
-            } catch (NumberFormatException e) {
-                // Handle the case where the input is not a valid integer
-                // Needs to be here or else the code will not run
-                resultField.setText("Invalid input");
-            }
-        });
+    public void operations() {
+        userClicksAdd();
+        userClicksSub();
+        userClicksMul();
+        userClicksDiv();
     }
 ```
 ```
