@@ -20,15 +20,15 @@ public class UserInput {
     public double convertSecondNumberTextFieldToInt(){ return Double.parseDouble(secondNumber.getText()); }
 
     public String sumOfInput(){
-        return Double.toString(convertFirstNumberTextFieldToInt() + convertSecondNumberTextFieldToInt());
+        return Integer.toString( (int)(convertFirstNumberTextFieldToInt() + convertSecondNumberTextFieldToInt()) );
     }
 
     public String subOfInput(){
-        return Double.toString(convertFirstNumberTextFieldToInt() - convertSecondNumberTextFieldToInt());
+        return Integer.toString( (int)(convertFirstNumberTextFieldToInt() - convertSecondNumberTextFieldToInt()) );
     }
 
     public String mulOfInput(){
-        return Double.toString(convertFirstNumberTextFieldToInt() * convertSecondNumberTextFieldToInt());
+        return Integer.toString( (int)(convertFirstNumberTextFieldToInt() * convertSecondNumberTextFieldToInt()) );
     }
 
     public String divOfInput(){
