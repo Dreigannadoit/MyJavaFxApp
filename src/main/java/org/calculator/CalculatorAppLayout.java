@@ -75,10 +75,12 @@ public class CalculatorAppLayout implements Display {
             } catch (NumberFormatException e) {
                 // Handle the case where the input is not a valid integer
                 // Needs to be here or else the code will not run
-                if(firstNumberField.getText().isEmpty() && secondNumberField.getText().isEmpty() ){
-                    resultField.setText("Complete Input Field");
-                } else if( firstNumberField.getText().isEmpty() || secondNumberField.getText().isEmpty() ){
-                    resultField.setText("Enter First and Second Number");
+                if( firstNumberField.getText().isEmpty() && !secondNumberField.getText().isEmpty() ){
+                    resultField.setText("Enter First Number");
+                } else if( !firstNumberField.getText().isEmpty() && secondNumberField.getText().isEmpty() ) {
+                    resultField.setText("Enter Second Number");
+                } else if( firstNumberField.getText().isEmpty() && secondNumberField.getText().isEmpty() ){
+                    resultField.setText("Enter Fields");
                 } else{
                     resultField.setText("Invalid input");
                 }
