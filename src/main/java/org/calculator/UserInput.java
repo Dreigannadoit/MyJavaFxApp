@@ -32,6 +32,8 @@ public class UserInput {
     }
 
     public String divOfInput(){
-        return Double.toString(convertFirstNumberTextFieldToInt() / convertSecondNumberTextFieldToInt());
+        double result = convertFirstNumberTextFieldToInt() / convertSecondNumberTextFieldToInt();
+
+        return (result == Double.POSITIVE_INFINITY) ? "Cannot divide by 0" : Double.toString(result);
     }
 }

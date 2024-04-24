@@ -32,36 +32,56 @@ public class CalculatorAppLayout implements Display {
     }
 
     public void buttonAssignment(Button button){
+        // Get user input
+        UserInput userInput = new UserInput(firstNumberField, secondNumberField);
+
+        // Perform operation based on the button's text
+        final String[] buttonText = {button.getText()};
+
         button.setOnAction(action -> {
             try {
-                // Get user input
-                UserInput userInput = new UserInput(firstNumberField, secondNumberField);
-                // Perform operation based on the button's text
-                String buttonText = button.getText();
                 String result = "";
-                switch (buttonText) {
+                String operation = "";
+
+                switch (buttonText[0]) {
                     case "Add":
+                        operation = "Add";
                         result = userInput.sumOfInput();
                         break;
                     case "Subtract":
+                        operation = "Subtract";
                         result = userInput.subOfInput();
                         break;
                     case "Multiply":
+                        operation = "Multiply";
                         result = userInput.mulOfInput();
                         break;
                     case "Divide":
+                        operation = "Divide";
                         result = userInput.divOfInput();
                         break;
                     default:
                         break;
                 }
+
                 // Display result
-                resultField.setText(result);
+                resultField.setText( result );
+
+                System.out.println( userInput.getFirstNumber().getText() );
+                System.out.println( userInput.getSecondNumber().getText() );
+                System.out.println( operation );
+                System.out.println( result + "\n");
 
             } catch (NumberFormatException e) {
                 // Handle the case where the input is not a valid integer
                 // Needs to be here or else the code will not run
-                resultField.setText("Invalid input");
+                if(firstNumberField.getText().isEmpty() && secondNumberField.getText().isEmpty() ){
+                    resultField.setText("Complete Input Field");
+                } else if( firstNumberField.getText().isEmpty() || secondNumberField.getText().isEmpty() ){
+                    resultField.setText("Enter First and Second Number");
+                } else{
+                    resultField.setText("Invalid input");
+                }
             }
         });
     }
