@@ -12,7 +12,7 @@ out/artifacts/MyJavaFxApp_jar
 ```
 or in this [Link text Here](https://drive.google.com/file/d/12309q9GcGekpfBg7vEBgjezmbgyDrTb5/view?usp=sharing)
 
-<p>The executable file is located in this folder location</p>  
+<p> App version 2.1 </p>  
 
 <br />
 

@@ -33,7 +33,16 @@ public class UserInput {
 
     public String divOfInput(){
         double result = convertFirstNumberTextFieldToInt() / convertSecondNumberTextFieldToInt();
+        String diviResult;
 
-        return (result == Double.POSITIVE_INFINITY) ? "Cannot divide by 0" : Double.toString(result);
+        if( result == Double.POSITIVE_INFINITY ) {
+            diviResult = "can not divide by 0";
+        } else if ( Double.isNaN(result) ){
+            diviResult = "indeterminate (by 0/0)";
+        } else {
+            diviResult = Double.toString(result);
+        }
+
+        return diviResult;
     }
 }
