@@ -70,7 +70,7 @@ public class CalculatorAppLayout implements Display {
                 System.out.println( userInput.getFirstNumber().getText() );
                 System.out.println( userInput.getSecondNumber().getText() );
                 System.out.println( operation );
-                System.out.println( result + "\n");
+                System.out.println( "= " + result + "\n");
 
             } catch (NumberFormatException e) {
                 // Handle the case where the input is not a valid integer
