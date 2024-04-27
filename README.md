@@ -11,7 +11,7 @@
 out/artifacts/MyJavaFxApp_jar 
 ```
 
-##Version Download 
+## Version Download 
 - [ Ver 1.0 ](https://drive.google.com/file/d/12309q9GcGekpfBg7vEBgjezmbgyDrTb5/view?usp=sharing) 
 - [ Ver 2.0 ](https://drive.google.com/file/d/18Yd9BJRmehhzJDtJTSwcH1rzZ1V8AzRK/view?usp=sharing)
 
