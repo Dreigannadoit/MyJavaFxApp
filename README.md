@@ -26,12 +26,13 @@ out/artifacts/MyJavaFxApp_jar
 
 <p>Make sure to download JavaFx sdk 19 onwards, or the app may not run as intended. </p>
 
-[JavaFX SDK](https://gluonhq.com/products/javafx/)
+[Download JavaFX SDK](https://gluonhq.com/products/javafx/)
+
 <p>And the dependencies (such as the libraries used) are in the respective files, but are not shown in this md. </p>
 
 <br />
 
-### Code:
+## Code:
   
 App.java - runs the code in an executable file. 
 ``` 
