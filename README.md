@@ -37,7 +37,7 @@ out/artifacts/MyJavaFxApp_jar
 App.java 
 - runs the code in an executable file.
 - This part is not needed for the code to run properly becuase the main file can independently run. But is required if we want the executable file to run.
-- 
+
 ``` 
 public class App {
     public static void main(String[] args){
