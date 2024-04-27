@@ -3,7 +3,6 @@
 
 <br />
 
-
 <p> App version 2.1 </p>  
 
 <hr />
