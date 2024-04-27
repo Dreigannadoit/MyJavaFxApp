@@ -1,8 +1,5 @@
 # Basic Calcultor App
 ### Code By Drei Abmab
-
-<br />
-
 ### App version 2.1
 
 <hr />
