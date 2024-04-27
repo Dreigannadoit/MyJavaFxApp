@@ -3,11 +3,13 @@
 
 <br />
 
-<p> App version 2.1 </p>  
+### App version 2.1
 
 <hr />
 
-### Intro
+<br />
+
+## Intro
 <p>For CCC102 Project involving JavaFx GUI.  </p>
 <p>The executable file is located in this folder location</p>  
 
